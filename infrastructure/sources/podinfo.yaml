@@ -7,8 +7,3 @@ spec:
   url: https://github.com/stefanprodan/podinfo.git
   ref:
     branch: master
-  ignore: |
-    # exclude all
-    /*
-    # include deploy dir
-    !/charts/
