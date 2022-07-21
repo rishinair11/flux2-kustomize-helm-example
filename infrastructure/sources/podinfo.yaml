@@ -1,7 +1,14 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+kind: GitRepository
 metadata:
   name: podinfo
 spec:
   interval: 5m
-  url: https://stefanprodan.github.io/podinfo
+  url: https://github.com/stefanprodan/podinfo.git
+  ref:
+    branch: master
+  ignore: |
+    # exclude all
+    /*
+    # include deploy dir
+    !/charts/
